@@ -1,0 +1,17 @@
+<p>add-product works!</p>
+
+<!-- src/app/products/add-product/add-product.component.html -->
+<div>
+  <h2>Add Product</h2>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName" formControlName="name" required>
+
+    <label for="productQuantity">Product Quantity:</label>
+    <input type="number" id="productQuantity" formControlName="quantity" required>
+
+    <button type="submit" [disabled]="!productForm.valid">Add Product</button>
+  </form>
+</div>
+
+<button (click)="goToProducts()">Products</button>

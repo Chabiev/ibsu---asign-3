@@ -1,0 +1,18 @@
+<div>
+    <h2>Product Dashboard</h2>
+    
+    <div *ngIf="products.length > 0">
+        <h3>Existing Products</h3>
+        <ul>
+          <li   *ngFor="let product of products">
+            <div>
+                {{ product.name }} - Quantity: {{ product.quantity }}
+            </div>
+            
+            <br>
+          </li>
+        </ul>
+      </div>
+  </div>
+
+  <button (click)="goToAddProducts()">Add new product</button>
